@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Adopciones: Detalle de una categoría de adopción
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <ul>
+        <li>Nombre: {{ object.nombre }}</li>
+        <li>Descripción: {{ object.descripcion }}</li>
+    </ul>
+
+    <div class="fs-3 pb-4">
+        <a href="{% url 'adopcion:adopcioncategoria_list' %}" class="btn btn-secondary">Volver</a>
+    </div>
+    
+{% endblock contenido %}

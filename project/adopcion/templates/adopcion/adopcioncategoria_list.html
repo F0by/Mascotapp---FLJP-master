@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Adopción: Lista de Categoría de adopciones
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <div class="py-lg-4 ">
+        <form action="{% url 'adopcion:adopcioncategoria_list' %}" method="get">
+            <input type="text" name="consulta" placeholder="Buscar...">
+        </form>
+    </div>
+    <ul>
+        {% comment  %}
+        {% for adopcion in adopcions %}
+        {% endcomment %}
+
+        {% for adopcion in object_list %}
+            <li>{{ adopcion.nombre }}
+                <a href="{% url 'adopcion:adopcioncategoria_detail' adopcion.id %}">Detalle</a>
+                <a href="{% url 'adopcion:adopcioncategoria_update' adopcion.id %}">Cambiar</a>
+                <a href="{% url 'adopcion:adopcioncategoria_delete' adopcion.id %}">Borrar</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="fs-3 pb-4">
+        <a href="{% url 'mascota:home' %}" class="btn btn-secondary">Volver al inicio de adopciones</a>
+    </div>
+{% endblock contenido %}

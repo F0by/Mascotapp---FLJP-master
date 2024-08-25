@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Mascota: 
+    {% if form.instance.pk %}
+        Editar
+    {% else %}
+        Crear
+    {% endif %}
+    Mascotas
+{% endblock titulo %}
+
+{% block contenido %}
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        <div class="fs-3 pb-4">
+            <a href="{% url 'mascota:mascota_list' %}" class="btn btn-secondary">Volver al inicio de Mascotas</a>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

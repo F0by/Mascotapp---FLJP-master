@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    Adopciones
+{% endblock titulo %}
+{% block contenido %}
+<div class="container my-5">
+    <h3 class="pb-3 border-bottom">Categoría de adopciones</h3>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4">
+        <a class="btn btn-primary me-md-2" href="{% url 'adopcion:adopcion_create' %}" role="button">Crear Categorías de Adopciones</a>
+        <a class="btn btn-outline-primary" href="{% url 'adopcion:adopcion_list' %}" role="button">Listar Categorías de Adopciones</a>
+    </div>
+
+    <h3 class="pb-3 border-bottom">Adopciones</h3>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4">
+        <a class="btn btn-success me-md-2" href="{% url 'adopcion:adopcion_create' %}" role="button">Crear Adopciones</a>
+        <a class="btn btn-outline-success" href="{% url 'adopcion:adopcion_list' %}" role="button">Listar Adopciones</a>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4">
+        <a class="btn btn-secondary" href="{% url 'core:home' %}" role="button">Volver a Inicio</a>
+    </div>
+</div>
+
+{% endblock contenido %}

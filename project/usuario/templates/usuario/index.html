@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Usuarios/as
+{% endblock titulo %}
+
+{% block contenido %}
+    <div class="row row-cols-1 row-cols-md-2">
+        {% for usuario in usuarios %}
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ usuario.username }}</h2>
+                        <p class="card-text">Email: {{ usuario.email }}</p>
+                        {% if usuario.nombre or usuario.apellido %}
+                            <p class="card-text">Nombre: {{ usuario.nombre}} {{ usuario.apellido }}</p>
+                        {% else %}
+                            <p class="card-text">No se registra ese nombre ni apellido.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock contenido %}

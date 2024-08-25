@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block titulo %}
+    {{object.nombre}}
+{% endblock titulo %}
+
+{% block contenido %}
+    <dl>
+        <dt>Nombre</dt>
+        <dd>{{object.nombre}}</dd>
+        <dt>Tamaño</dt>
+        <dd>{{object.tamano}}</dd>
+        <dt>Descripción</dt>
+        <dd>{{object.descripcion}}</dd>
+    </dl>
+
+    <section class="fs-3 pb-4">
+        <a href="{% url 'adopcion:adopcion_create' %}" class="btn btn-primary">Adoptar a {{ object.nombre }}</a>
+        <a href="{% url 'mascota:mascota_list' %}" class="btn btn-secondary">Volver</a>
+    </section>
+    
+{% endblock contenido %}
