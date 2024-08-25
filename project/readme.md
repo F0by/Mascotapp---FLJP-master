@@ -1,6 +1,6 @@
 # Proyecto Mascotapp
 
-Mariana Álvarez Flores Comisión: 54135
+López Fabiana Gabriela
 
 # Acerca del proyecto
 
@@ -9,10 +9,9 @@ La aplicación web implementa operaciones de CRUD.
 
 # Video de presentación
 
-En el video se me pasó mencionaerlo pero utilizando el usuario admin / pass: 123 verán que los pedidos de adopciones se listarán para su vista. Super user creado. admin / pass: 123
+Utilizando el usuario admin / pass: 123 verán que los pedidos de adopciones se listarán para su vista. Super user creado. admin / pass: 123
 
-https://youtu.be/QySdKI8ouFI
-
+https://www.youtube.com/watch?v=_Rn8avIrYDU
 # Aplicaciones
 
 Usuarios: Permite a los usuarios registrarse, iniciar sesión, adoptar o sumar una mascota.
@@ -31,18 +30,3 @@ En VSC:
 4. python manage.py migrate
 5. python manage.py runserver
 
-# Mejoras a futuro
-
-1. Rotación automática de animales para prevenir que los animales cargados no se ordenen por orden cronológico y que potencialmente reduzca sus oportunidades de ser adoptados.
-
-2. Envío automático de consejos para tenencia responsable de mascotas.
-
-3. Sumar veterinaria más cercana.
-
-4. App Riesgo de vida: videos incrustados por temáticas de urgencia. Videos sin publicidades e instrucciones claras de cómo resolver.
-
-5. App 'Mi mascota' donde cargar la libreta sanitaria y envío automático de recordatorios de vacunas próximas a vencer, desparasitaciones, etc.
-
-6. Sistema de mensajería interna para facilitar la comunicación entre usuarios y administradores.
-
-7. Integración con redes sociales para compartir perfiles de mascotas y promover la adopción.
