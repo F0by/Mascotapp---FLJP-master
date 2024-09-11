@@ -9,14 +9,14 @@ from .forms import MascotaForm
 def home(request):
     return render(request, 'mascota/mascota_list.html')
 
-class MascotaCreate(CreateView):
+class MascotaCreate(LoginRequiredMixin, CreateView):
     model = Mascota
     form_class = MascotaForm
     template_name = 'mascota/mascota_form.html'
     success_url = reverse_lazy ('mascota:mascota_list')
 
 
-class MascotaList(ListView): 
+class MascotaList(LoginRequiredMixin, ListView): 
     model = Mascota 
     template_name = 'mascota/mascota_list.html' 
     context_object_name = 'mascotas'
@@ -28,12 +28,12 @@ class MascotaList(ListView):
             QuerySet = QuerySet.filter(nombre__icontains = nombre)
         return QuerySet
     
-class MascotaDetail(DetailView):
+class MascotaDetail(LoginRequiredMixin, DetailView):
     model = Mascota
     context_object_name = 'mascota'
     template_name = 'mascota/detalle_mascota.html'
 
-class MascotaUpdate(UpdateView):
+class MascotaUpdate(LoginRequiredMixin, UpdateView):
     model = Mascota
     form_class    = MascotaForm
     template_name = 'mascota/actualizar_mascota.html'

@@ -30,6 +30,7 @@
                         <li class="nav-item"><a class="nav-link {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'core:home' %}">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link {% if request.path == '/sobre-mi/' %} active {% endif %}" href="{% url 'core:sobre_mi' %}">Sobre mi</a></li>
                         {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link {% if request.path == '/usuario/' %} active {% endif %}" href="{% url 'usuario:editar_usuario' %}">Editar usuario</a></li>
                             <li class="nav-item"><a class="nav-link {% if request.path == '/mascota/' %} active {% endif %}" href="{% url 'mascota:mascota_list' %}">Mascotas</a></li>
                             {% if user.is_superuser%}    
                             <li class="nav-item"><a class="nav-link {% if request.path == '/adopcion/' %} active {% endif %}" href="{% url 'adopcion:adopcion_list' %}">Pedidos de adopción</a></li>
